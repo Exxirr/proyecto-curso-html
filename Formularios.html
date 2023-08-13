@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularuios en HTML</title>
+</head>
+
+<body>
+
+  <h1>Formularios</h1>
+
+  <hr>
+
+  <form action="envio.php" method="POST" target="_blank">
+    <label for="usuario">Usuario :</label>
+    <input type="text" name="usuario" value="Sergie Code" maxlength="10" minlength="4" pattern="[A-Za-z]{9}">
+    <small>Debe tener 9 caracteres</small>
+    <br>
+    <br>
+    <label for="correo">Mail :</label>
+    <input type="email" id="correo" name="correo" placeholder="Escribe correo">
+    <br>
+    <br>
+    <label for="password">Contraseña :</label>
+    <input type="password" name="password" placeholder="Escribe tu contraseña" required>
+    <br>
+    <input type="checkbox" name="lenguajes" value="HTML">HTML
+    <input type="checkbox" name="lenguajes" value="CSS">CSS
+    <input type="checkbox" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
+    <input type="checkbox" name="lenguajes" value="REACT">REACT
+    <br>
+    <input type="radio" name="lenguajes" value="HTML">HTML
+    <input type="radio" name="lenguajes" value="CSS">CSS
+    <input type="radio" name="lenguajes" value="JAVASCRIPT">JAVASCRIPT
+    <input type="radio" name="lenguajes" value="REACT">REACT
+    <br>
+    <label for="programando">Años programando :</label>
+    <input type="number" id="programando" name="programando" placeholder="Años programando" max="3" min="1">
+    <br>
+    <br>
+    <label for="fecha">Fecha de ingreso laboral :</label>
+    <input type="date" id="fecha" name="fecha" max="2023-08-13">
+    <br>
+    <br>
+    <label for="archivo">Subi tu curriculum :</label>
+    <input type="file" id="archivo" name="archivo" value="file">
+    <br>
+    <br>
+    <label for="opinion"></label>
+    <textarea name="opinion" id="opinion" placeholder="Escribi tu opinión"></textarea>
+    <br>
+    <br>
+    <label for="pais">Selecciona tu pais de origen :</label>
+    <select name="pais" id="pais">
+      <optgroup label="America">
+        <option value="Argentina">Argentina</option>
+        <option value="Peru">Perú</option>
+        <option value="Mexico" selected="selected">Mexico</option>
+      </optgroup>
+
+      <optgroup label="Europa">
+        <option value="Francia">Francia</option>
+        <option value="Croacia">Croacia</option>
+        <option value="Marruecos">Marruecos</option>
+      </optgroup>
+    </select>
+
+    <br>
+    <br>
+
+    <input type="submit" value="Enviar tus datos"> Submit
+    <input type="reset" value="Resetear tus datos">
+
+    <br>
+    <br>
+
+    <input type="button" onclick="alert('Suscribete a mi canal')" value="Saludando">
+    <button onclick="alert('Suscribete a mi canal')">Hazme click</button>
+  </form>
+</body>
+
+</html>
+
+<!--Etiqueta nueva
+form -> iniciar un formulario
+input -> entrada de datos
+label ->  representa para un elemento input el titulo
+textarea -> un rectangulo grande que se usa para los comentarios
+select -> para agregar un grupo de opciones
+option -> trabaja a la par con el select para realizar un combobox
+small  -> poner un texto de letra pequeña
+
+type -> el tipo de dato que ingresara
+id   -> identificador unico
+name -> diferencias los difentes inputs
+value -> Ya por defecto escribira el texto que pongas
+plahaceholder -> Agrega texto de que trata en input
+selected -> visualiza al elemento seleccionado con este atributo
+action   -> Url de destino puede ser de cualquier lenguaje
+method   -> Envia a traves del metodo post / metodo get envia formulario como si fuera un url como clave y valor.
+readonly -> no puedes modificarlo
+disabled -> desahabilita el input
+maxlength -> tamaño maximo
+minlength -> tamaño minimo
+pattern    -> Expresiones regulares
+required   -> el input sea obligatorio de rellenar
+
+
+VALIDACIONES COMO EN FRONTEND Y BACKEND.
+
+type checkbox -> podemos marcar mas de uno
+type radio    -> solo podemos seleccionar uno
+
+-->
